@@ -1,11 +1,12 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from routers import (
+from backend.routers import (
     offers, offer_requests, orders, payments, seat_maps,
     order_cancellations, order_changes, partial_offer_requests,
     batch_offer_requests, airline_credits
 )
-from utils.error_handlers import api_exception
+
+from backend.utils.error_handlers import api_exception
 
 app = FastAPI(
     title="Duffel Python API",

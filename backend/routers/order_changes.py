@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from services.duffel_client import DuffelClient
-from utils.error_handlers import api_exception
+from backend.services.duffel_client import DuffelClient
+from backend.utils.error_handlers import api_exception
 
 router = APIRouter()
 duffel = DuffelClient()

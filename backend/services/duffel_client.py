@@ -1,5 +1,5 @@
 import httpx
-from config import settings
+from backend.config import settings
 
 class DuffelClient:
     def __init__(self):

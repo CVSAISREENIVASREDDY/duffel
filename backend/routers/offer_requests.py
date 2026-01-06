@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query
-from models.duffel import OfferCreateRequest
-from services.duffel_client import DuffelClient
-from utils.error_handlers import api_exception
+from backend.models.duffel import OfferCreateRequest
+from backend.services.duffel_client import DuffelClient
+from backend.utils.error_handlers import api_exception
 
 router = APIRouter()
 duffel = DuffelClient()

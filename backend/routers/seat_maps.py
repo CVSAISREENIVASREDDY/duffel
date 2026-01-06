@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Query
-from services.duffel_client import DuffelClient
-from utils.error_handlers import api_exception
+from backend.services.duffel_client import DuffelClient
+from backend.utils.error_handlers import api_exception
 
 router = APIRouter()
 duffel = DuffelClient()
@@ -11,4 +11,4 @@ async def get_seat_maps(offer_id: str = Query(...)):
         result = await duffel.get("/air/seat_maps", {"offer_id": offer_id})
         return {"success": True, "data": result}
     except Exception as e:
-        return api_exception(e)
+        return api_exception(e) 

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query
-from services.duffel_client import DuffelClient
-from utils.error_handlers import api_exception
-from models.duffel import CreatePaymentRequest 
+from backend.services.duffel_client import DuffelClient
+from backend.utils.error_handlers import api_exception
+from backend.models.duffel import CreatePaymentRequest 
 
 router = APIRouter()
 duffel = DuffelClient()
